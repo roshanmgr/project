@@ -27,7 +27,7 @@
 
 <section class="features" id="features">
 
-    <h1 class="heading"> <span>Our Service</span> </h1>
+    <h1 class="heading"> <span>Our Services </span> </h1>
 
     <div class="box-container">
 
@@ -51,6 +51,13 @@
             <p>LYou can have a <b>5%</b> interest on the amount that you have deposited on your account.A user can deposite upto 10,000.</p>
             <a href="#" class="btn">read more</a>
         </div>
+
+        <!-- <div class="box">
+            <img src="image/deposite.jpg" alt="">
+            <h3>Terms and Condition</h3>
+            <p>LYou can have a <b>5%</b> interest on the amount that you have deposited on your account.A user can deposite upto 10,000.</p>
+            <a href="#" class="btn">read more</a>
+        </div> -->
 
     </div>
 
