@@ -1,3 +1,17 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
+{
+    // header("location: a-login.php");
+}
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
 <html lang="en" dir="ltr">
@@ -96,7 +110,7 @@
       </div>
       <div class="profile-details">
         <!--<img src="images/profile.jpg" alt="">-->
-        <span class="admin_name">Prem Shahi</span>
+        <span class="admin_name">Roshan Thapa Magar</span>
         <i class='bx bx-chevron-down' ></i>
       </div>
     </nav>
@@ -105,53 +119,53 @@
       <div class="overview-boxes">
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">Total Order</div>
+            <div class="box-topic">Members</div>
             <div class="number">40,876</div>
             <div class="indicator">
-              <i class='bx bx-up-arrow-alt'></i>
+              <!-- <i class='bx bx-up-arrow-alt'></i> -->
               <span class="text">Up from yesterday</span>
             </div>
           </div>
-          <i class='bx bx-cart-alt cart'></i>
+          <!-- <i class='bx bx-cart-alt cart'></i> -->
         </div>
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">Total Sales</div>
+            <div class="box-topic">loan Request</div>
             <div class="number">38,876</div>
             <div class="indicator">
-              <i class='bx bx-up-arrow-alt'></i>
+              <!-- <i class='bx bx-up-arrow-alt'></i> -->
               <span class="text">Up from yesterday</span>
             </div>
           </div>
-          <i class='bx bxs-cart-add cart two' ></i>
+          <!-- <i class='bx bxs-cart-add cart two' ></i> -->
         </div>
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">Total Profit</div>
-            <div class="number">$12,876</div>
+            <div class="box-topic">Transaction</div>
+            <div class="number">Rs12,876</div>
             <div class="indicator">
-              <i class='bx bx-up-arrow-alt'></i>
+              <!-- <i class='bx bx-up-arrow-alt'></i> -->
               <span class="text">Up from yesterday</span>
             </div>
           </div>
-          <i class='bx bx-cart cart three' ></i>
+          <!-- <i class='bx bx-cart cart three' ></i> -->
         </div>
         <div class="box">
           <div class="right-side">
             <div class="box-topic">Total Return</div>
             <div class="number">11,086</div>
             <div class="indicator">
-              <i class='bx bx-down-arrow-alt down'></i>
+              <!-- <i class='bx bx-down-arrow-alt down'></i> -->
               <span class="text">Down From Today</span>
             </div>
           </div>
-          <i class='bx bxs-cart-download cart four' ></i>
+          <!-- <i class='bx bxs-cart-download cart four' ></i> -->
         </div>
       </div>
 
       <div class="sales-boxes">
         <div class="recent-sales box">
-          <div class="title">Recent Sales</div>
+          <div class="title">Recent Loan Request</div>
           <div class="sales-details">
             <ul class="details">
               <li class="topic">Date</li>
@@ -162,42 +176,56 @@
               <li><a href="#">02 Jan 2021</a></li>
               <li><a href="#">02 Jan 2021</a></li>
               <li><a href="#">02 Jan 2021</a></li>
+              <li><a href="#">02 Jan 2021</a></li>
+              <li><a href="#">02 Jan 2021</a></li>
             </ul>
             <ul class="details">
-            <li class="topic">Customer</li>
-            <li><a href="#">Alex Doe</a></li>
-            <li><a href="#">David Mart</a></li>
-            <li><a href="#">Roe Parter</a></li>
-            <li><a href="#">Diana Penty</a></li>
-            <li><a href="#">Martin Paw</a></li>
-            <li><a href="#">Doe Alex</a></li>
-            <li><a href="#">Aiana Lexa</a></li>
-            <li><a href="#">Rexel Mags</a></li>
-             <li><a href="#">Tiana Loths</a></li>
+            <li class="topic">User</li>
+            <li><a href="#">Tej Bdr. Magar</a></li>
+            <li><a href="#">Tika Devi Magar</a></li>
+            <li><a href="#">Krishan Bdr. Magar</a></li>
+            <li><a href="#">Nani Maiya Magar</a></li>
+            <li><a href="#">Rojina Thapa</a></li>
+            <li><a href="#">Roshan Thapa</a></li>
+            <li><a href="#">Rohan Thapa Magar</a></li>
+            <li><a href="#">Ratan Bhujel</a></li>
+            <li><a href="#">Rabin Bhujel</a></li>
+        </ul>
+          <ul class="details">
+            <li class="topic">Amount</li>
+            <li><a href="#">Rs 204.98</a></li>
+            <li><a href="#">Rs 24.55</a></li>
+            <li><a href="#">Rs 25.88</a></li>
+            <li><a href="#">Rs 170.66</a></li>
+            <li><a href="#">Rs 56.56</a></li>
+            <li><a href="#">Rs 44.95</a></li>
+            <li><a href="#">Rs 67.33</a></li>
+            <li><a href="#">Rs 23.53</a></li>
+            <li><a href="#">Rs 46.52</a></li>
           </ul>
           <ul class="details">
-            <li class="topic">Sales</li>
-            <li><a href="#">Delivered</a></li>
-            <li><a href="#">Pending</a></li>
-            <li><a href="#">Returned</a></li>
-            <li><a href="#">Delivered</a></li>
-            <li><a href="#">Pending</a></li>
-            <li><a href="#">Returned</a></li>
-            <li><a href="#">Delivered</a></li>
-             <li><a href="#">Pending</a></li>
-            <li><a href="#">Delivered</a></li>
+            <li class="topic">Institute</li>
+            <li><a href="#">Aadim National college</a></li>
+            <li><a href="#">Jaya Miltiple Campus</a></li>
+            <li><a href="#">Shangri-la Public school</a></li>
+            <li><a href="#">Aadim National college</a></li>
+            <li><a href="#">Jaya Miltiple Campus</a></li>
+            <li><a href="#">Shangri-la Public school</a></li>
+            <li><a href="#">Aadim National college</a></li>
+            <li><a href="#">Jaya Miltiple Campus</a></li>
+            <li><a href="#">Aadim National college</a></li>
           </ul>
           <ul class="details">
-            <li class="topic">Total</li>
-            <li><a href="#">$204.98</a></li>
-            <li><a href="#">$24.55</a></li>
-            <li><a href="#">$25.88</a></li>
-            <li><a href="#">$170.66</a></li>
-            <li><a href="#">$56.56</a></li>
-            <li><a href="#">$44.95</a></li>
-            <li><a href="#">$67.33</a></li>
-             <li><a href="#">$23.53</a></li>
-             <li><a href="#">$46.52</a></li>
+            <li class="topic">Status</li>
+            <li><a href="#">Approved</a></li>
+            <li><a href="#">Pending</a></li>
+            <li><a href="#">Returned</a></li>
+            <li><a href="#">Approved</a></li>
+            <li><a href="#">Pending</a></li>
+            <li><a href="#">Returned</a></li>
+            <li><a href="#">Approved</a></li>
+            <li><a href="#">Pending</a></li>
+            <li><a href="#">Approved</a></li>
           </ul>
           </div>
           <div class="button">
@@ -205,62 +233,62 @@
           </div>
         </div>
         <div class="top-sales box">
-          <div class="title">Top Seling Product</div>
+          <div class="title">Redeem Request</div>
           <ul class="top-sales-details">
             <li>
             <a href="#">
               <!--<img src="images/sunglasses.jpg" alt="">-->
               <span class="product">Vuitton Sunglasses</span>
             </a>
-            <span class="price">$1107</span>
+            <span class="price">Rs 1107</span>
           </li>
           <li>
             <a href="#">
                <!--<img src="images/jeans.jpg" alt="">-->
               <span class="product">Hourglass Jeans </span>
             </a>
-            <span class="price">$1567</span>
+            <span class="price">Rs 1567</span>
           </li>
           <li>
             <a href="#">
              <!-- <img src="images/nike.jpg" alt="">-->
               <span class="product">Nike Sport Shoe</span>
             </a>
-            <span class="price">$1234</span>
+            <span class="price">Rs 1234</span>
           </li>
           <li>
             <a href="#">
               <!--<img src="images/scarves.jpg" alt="">-->
               <span class="product">Hermes Silk Scarves.</span>
             </a>
-            <span class="price">$2312</span>
+            <span class="price">Rs 2312</span>
           </li>
           <li>
             <a href="#">
               <!--<img src="images/blueBag.jpg" alt="">-->
               <span class="product">Succi Ladies Bag</span>
             </a>
-            <span class="price">$1456</span>
+            <span class="price">Rs 1456</span>
           </li>
           <li>
             <a href="#">
               <!--<img src="images/bag.jpg" alt="">-->
               <span class="product">Gucci Womens's Bags</span>
             </a>
-            <span class="price">$2345</span>
+            <span class="price">Rs 2345</span>
           <li>
             <a href="#">
               <!--<img src="images/addidas.jpg" alt="">-->
               <span class="product">Addidas Running Shoe</span>
             </a>
-            <span class="price">$2345</span>
+            <span class="price">Rs 2345</span>
           </li>
 <li>
             <a href="#">
              <!--<img src="images/shirt.jpg" alt="">-->
               <span class="product">Bilack Wear's Shirt</span>
             </a>
-            <span class="price">$1245</span>
+            <span class="price">Rs 1245</span>
           </li>
           </ul>
         </div>

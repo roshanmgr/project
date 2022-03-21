@@ -7,11 +7,14 @@
   font-family: 'Poppins', sans-serif;
   outline: none;
 }
+body{
+    background-color: #666;
+}
 .sidebar{
   position: fixed;
   height: 100%;
   width: 240px;
-  background: #0A2558;
+  background: #130f40;
   transition: all 0.5s ease;
 }
 .sidebar.active{
@@ -51,10 +54,10 @@
   transition: all 0.4s ease;
 }
 .sidebar .nav-links li a.active{
-  background: #081D45;
+  background: #130f40;
 }
 .sidebar .nav-links li a:hover{
-  background: #081D45;
+  background: #A8A8A8;
 }
 .sidebar .nav-links li i{
   min-width: 60px;
@@ -75,7 +78,7 @@
 }
 .home-section{
   position: relative;
-  background: #f5f5f5;
+  background: #666;
   min-height: 100vh;
   width: calc(100% - 240px);
   left: 240px;
@@ -89,7 +92,7 @@
   display: flex;
   justify-content: space-between;
   height: 80px;
-  background: #fff;
+  background: #A8A8A8;
   display: flex;
   align-items: center;
   position: fixed;
@@ -190,7 +193,7 @@ nav .profile-details i{
   align-items: center;
   justify-content: center;
   width: calc(100% / 4 - 15px);
-  background: #fff;
+  background: whitesmoke;
   padding: 15px 14px;
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
@@ -262,8 +265,8 @@ nav .profile-details i{
 
 /* left box */
 .home-content .sales-boxes .recent-sales{
-  width: 65%;
-  background: #fff;
+  width: 70%;
+  background: whitesmoke;
   padding: 20px 30px;
   margin: 0 20px;
   border-radius: 12px;
@@ -314,8 +317,8 @@ nav .profile-details i{
 
 /* Right box */
 .home-content .sales-boxes .top-sales{
-  width: 35%;
-  background: #fff;
+  width: 30%;
+  background: whitesmoke;
   padding: 20px 30px;
   margin: 0 20px 0 0;
   border-radius: 12px;
