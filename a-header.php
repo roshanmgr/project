@@ -27,7 +27,7 @@
 		<a href="#">Service</a>
 		<a href="a-footer.php">Contact Us</a>
         <a href="a-login.php">Login</a>
-        <a href="u-register.php">signup</a>
+        <!-- <a href="u-register.php">signup</a> -->
     </nav>
 
     <div class="icons">

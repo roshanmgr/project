@@ -5,7 +5,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $mobile_num = $_POST['mobile_num'];
     $password = $_POST['password'];
 
-    $sql = "SELECT id, mobile_num FROM user WHERE mobile_num = '$mobile_num' and password = '$password'";
+    $sql = "SELECT id, mobile_num FROM register WHERE mobile_num = '$mobile_num' and password = '$password'";
     $result = mysqli_query($conn,$sql);
     $row = mysqli_fetch_assoc($result);
 
@@ -24,6 +24,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,14 +36,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <?php
-    include('a-header.php');
+    include('u-header.php');
     ?>
 <form class="login-form" method="post">
         <h3>login now</h3>
-        <input type="text" name="mobile_num" placeholder="Mobile number" class="box">
-        <input type="password" name="password" placeholder="your password" class="box">
-        <!-- <p><a href="#">forget password ?</a></p> -->
-        <!-- <p>don't have an account <a href="#">create now</a></p> -->
+        <input type="text" placeholder="Mobile number" class="box">
+        <input type="password" placeholder="your password" class="box">
+        <p><a href="#">forget password ?</a></p>
+        <p>don't have an account <a href="u-register.php">create now</a></p>
         <button type="submit" name="submit" class="btn">Login</button>
     </form> 
 

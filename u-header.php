@@ -7,7 +7,7 @@
     <title>sahayogi</title>
 
     <!-- font awesome cdn link  -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css\a-header.css">
@@ -22,32 +22,28 @@
     <a href="#home" class="logo">  <span style="color:brown">S</span><span style="color:blueviolet">A</span><span style="color:greenyellow">H</span><span style="color:red">A</span><span style="color:grey">Y</span><span style="color:yellowgreen">O</span><span style="color:purple">G</span><span style="color:lavender">I</span> </a>
 
     <nav class="navbar">
-        <a href="#home">Home</a>
-		<a href="#about">About Us</a>
-		<a href="#services">Service</a>
-		<a href="#contactus">Contact Us</a>
+        <a href="u-home.php">Home</a>
+		<a href="#">About Us</a>
+		<a href="#">Service</a>
+		<a href="u-footer.php">Contact Us</a>
+        <a href="u-login.php">Login</a>
+        <a href="u-register.php">signup</a>
     </nav>
 
     <div class="icons">
         <div class="fas fa-bars" id="menu-btn"></div>
-        <!-- <div class="fas fa-search" id="search-btn"></div> -->
-        <!-- <div class="fas fa-user" id="login-btn"></div> -->
-
     </div>
 
-    <!-- <form action="" class="search-form">
-        <input type="search" id="search-box" placeholder="search here...">
-        <label for="search-box" class="fas fa-search"></label>
-    </form> -->
+   
        
-    <form action="a-body.php" class="login-form" method="post">
+    <!-- <form action="" class="login-form">
         <h3>login now</h3>
         <input type="email" placeholder="your email" class="box">
         <input type="password" placeholder="your password" class="box">
         <p><a href="#">forget password ?</a></p>
-        <p>don't have an account <a href="u-register.php">create now</a></p>
+        <p>don't have an account <a href="#">create now</a></p>
         <input type="submit" value="login now" class="btn">
-    </form> 
+    </form>  -->
 
 </header>
 

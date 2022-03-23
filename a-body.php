@@ -17,7 +17,7 @@
     <div class="content">
         <h3>Easy <span>Loan</span> in your hand.</h3>
         <p>Mini bank in your Pocket.Let's Give and Take. SAHAYOGI help you to deposite, withdraw, borrow and request for a loan.</p>
-        <a href="u-register.php" class="btn">Register Now</a>
+        <!-- <a href="u-register.php" class="btn">Register Now</a> -->
     </div>
 
 </section>

@@ -1,87 +1,37 @@
 <?php
-require_once "database\config.php";
 
-$mobile_num = $password = $confirm_password = "";
-$mobile_num_err = $password_err = $confirm_password_err = "";
+if(isset($_POST['submit'])) {
+    include ("database/config.php");
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $dob = $_POST['dob'];
+    $mobile_num = $_POST['mobile_num'];
+    $age = $_POST['age'];
+    $gender = $_POST['gender'];
+    $password = $_POST['password'];
+    $guardian_name = $_POST['guardian_name'];
+    $relationship = $_POST['relationship'];
+    $guardian_num = $_POST['guardian_num'];
+    $institute = $_POST['institute'];
+    $department = $_POST['department'];
+    $level = $_POST['level'];
+    $roll_num = $_POST['roll_num'];
+    $esewa_username = $_POST['esewa_username'];
+    $esewa_id = $_POST['esewa_id'];
 
-if ($_SERVER['REQUEST_METHOD'] == "POST"){
+        $sqlquery = "INSERT INTO register (name, email, dob, mobile_num, age, gender, password, guardian_name, relationship, guardian_num, institute, department, level, roll_num, esewa_username, esewa_id) VALUES ('$name', '$email','$dob', '$mobile_num', '$age', '$gender', '$password', '$guardian_name', '$relationship', '$guardian_num', '$institute', '$department', '$level', '$roll_num', '$esewa_username', '$esewa_id')";
 
-    // Check if mobile number/username is empty
-    if(empty(trim($_POST["mobile_num"]))){
-        $mobile_num_err = "Username cannot be blank";
-    }
-    else{
-        $sql = "SELECT id FROM register WHERE mobile_num = ?";
-        $stmt = mysqli_prepare($conn, $sql);
-        if($stmt)
-        {
-            mysqli_stmt_bind_param($stmt, "s", $param_mobile_num);
+        echo $mobile_num;
 
-            // Set the value of param username
-            $param_mobile_num = trim($_POST['mobile_num']);
+        echo $sqlquery;
 
-            // Try to execute this statement
-            if(mysqli_stmt_execute($stmt)){
-                mysqli_stmt_store_result($stmt);
-                if(mysqli_stmt_num_rows($stmt) == 1)
-                {
-                    $mobile_num_err = "This mobile number is already taken"; 
-                }
-                else{
-                    $mobile_num = trim($_POST['mobile_num']);
-                }
-            }
-            else{
-                echo "Something went wrong";
-            }
+        if (mysqli_query($conn, $sqlquery)){
+            // echo '<script>alert("record succesfully")</script>';
+            header("location: u-login.php");
+        } else {
+            echo "Error: " . $sqlquery . "<br>" . mysqli_error($conn);
         }
-    }
-
-    mysqli_stmt_close($stmt);
-
-
-// Check for password
-if(empty(trim($_POST['password']))){
-    $password_err = "Password cannot be blank";
-}
-elseif(strlen(trim($_POST['password'])) < 4){
-    $password_err = "Password cannot be less than 4 characters";
-}
-else{
-    $password = trim($_POST['password']);
-}
-
-// Check for confirm password field
-if(trim($_POST['password']) !=  trim($_POST['confirm_password'])){
-    $password_err = "Passwords should match";
-}
-
-
-// If there were no errors, go ahead and insert into the database
-if(empty($mobile_num_err) && empty($password_err) && empty($confirm_password_err))
-{
-    $sql = "INSERT INTO register (name, email, dob, mobile_num, age, gender, password, guardain_name, relationship, guardian_num, institute, department, level, roll_num, esewa_username, esewa_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    $stmt = mysqli_prepare($conn, $sql);
-    if ($stmt)
-    {
-        mysqli_stmt_bind_param($stmt, "ss", $param_mobile_num, $param_password);
-
-        // Set these parameters
-        $param_mobile_num = $mobile_num;
-        $param_password = password_hash($password, PASSWORD_DEFAULT);
-
-        // Try to execute the query
-        if (mysqli_stmt_execute($stmt))
-        {
-            header("location: a-login.php");
-        }
-        else{
-            echo "Something went wrong... cannot redirect!";
-        }
-    }
-    mysqli_stmt_close($stmt);
-}
-mysqli_close($conn);
+    
 }
 
 ?>
@@ -98,12 +48,12 @@ mysqli_close($conn);
   <link rel="stylesheet" href="./css/u-register.css">
 </head>
 <body>
-  <?php
-  include('a-header.php');
-  ?>
+    <?php
+    include('u-header.php');
+    ?>
 <div class="wrapper">
  <div class="form_container">
-   <form name="form">
+   <form name="form" method="POST">
    	<div class="r-heading">
      <h2>Registration Form</h2>
   </div>
@@ -117,7 +67,7 @@ mysqli_close($conn);
 
   <div class="form_item">
       <label>E_mail</label>
-      <input type="text" placeholder="abc@gmail.com" name="email" required>
+      <input type="email" placeholder="" name="email" required>
   </div>
 
   <div class="form_item">
@@ -130,7 +80,7 @@ mysqli_close($conn);
 
   <div class="form_item">
       <label>Contact No.</label>
-      <input type="text" placeholder="Mobile Number" name="mobile_num" required> 
+      <input type="number" placeholder="Mobile Number" name="mobile_num" required> 
   </div>
 
 
@@ -141,7 +91,8 @@ mysqli_close($conn);
 
   <div class="form_item">
     <label>Gender</label>
-    <select name="institute" name="gender" required>
+    <select  name="gender" required>
+	  <option selected>......</option>
 	  <option>Male</option>
 	  <option>Female</option>
 	  <option>other</option>
@@ -241,7 +192,7 @@ mysqli_close($conn);
 </div>
 
 </div>
-<button type="submit" class="btn">register</button>
+<button type="submit" name="submit" class="btn">register</button>
 
  </form>
  </div>

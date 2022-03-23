@@ -114,7 +114,7 @@ session_start();
       <div class="overview-boxes">
         <div class="box">
           <div class="right-side">
-            <div class="box-topic"><a href="a-member.php">Members</a></div>
+            <div class="box-topic"><a href="">Members</a></div>
             <!-- <div class="number">40,876</div> -->
             <!-- <div class="indicator"> -->
               <!-- <i class='bx bx-up-arrow-alt'></i> -->
@@ -158,10 +158,10 @@ session_start();
         </div>
       </div>
 
-      <div class="user-boxes">
-        <div class="recent-user box">
-          <div class="title">Recent Loan Request</div>
-          <div class="user-details">
+      <div class="sales-boxes">
+        <div class="recent-sales box">
+          <div class="title">Members</div>
+          <div class="sales-details">
             <ul class="details">
               <li class="topic">Date</li>
               <li><a href="#">02 Jan 2021</a></li>
@@ -186,18 +186,6 @@ session_start();
             <li><a href="#">Ratan Bhujel</a></li>
             <li><a href="#">Rabin Bhujel</a></li>
         </ul>
-          <ul class="details">
-            <li class="topic">Amount</li>
-            <li><a href="#">Rs 204.98</a></li>
-            <li><a href="#">Rs 24.55</a></li>
-            <li><a href="#">Rs 25.88</a></li>
-            <li><a href="#">Rs 170.66</a></li>
-            <li><a href="#">Rs 56.56</a></li>
-            <li><a href="#">Rs 44.95</a></li>
-            <li><a href="#">Rs 67.33</a></li>
-            <li><a href="#">Rs 23.53</a></li>
-            <li><a href="#">Rs 46.52</a></li>
-          </ul>
           <ul class="details">
             <li class="topic">Institute</li>
             <li><a href="#">Aadim</a></li>
@@ -226,66 +214,6 @@ session_start();
           <div class="button">
             <a href="#">See All</a>
           </div>
-        </div>
-        <div class="top-user box">
-          <div class="title">Redeem Request</div>
-          <ul class="top-user-details">
-            <li>
-            <a href="#">
-              <!--<img src="images/sunglasses.jpg" alt="">-->
-              <span class="product">Vuitton Sunglasses</span>
-            </a>
-            <span class="price">Rs 1107</span>
-          </li>
-          <li>
-            <a href="#">
-               <!--<img src="images/jeans.jpg" alt="">-->
-              <span class="product">Hourglass Jeans </span>
-            </a>
-            <span class="price">Rs 1567</span>
-          </li>
-          <li>
-            <a href="#">
-             <!-- <img src="images/nike.jpg" alt="">-->
-              <span class="product">Nike Sport Shoe</span>
-            </a>
-            <span class="price">Rs 1234</span>
-          </li>
-          <li>
-            <a href="#">
-              <!--<img src="images/scarves.jpg" alt="">-->
-              <span class="product">Hermes Silk Scarves.</span>
-            </a>
-            <span class="price">Rs 2312</span>
-          </li>
-          <li>
-            <a href="#">
-              <!--<img src="images/blueBag.jpg" alt="">-->
-              <span class="product">Succi Ladies Bag</span>
-            </a>
-            <span class="price">Rs 1456</span>
-          </li>
-          <li>
-            <a href="#">
-              <!--<img src="images/bag.jpg" alt="">-->
-              <span class="product">Gucci Womens's Bags</span>
-            </a>
-            <span class="price">Rs 2345</span>
-          <li>
-            <a href="#">
-              <!--<img src="images/addidas.jpg" alt="">-->
-              <span class="product">Addidas Running Shoe</span>
-            </a>
-            <span class="price">Rs 2345</span>
-          </li>
-<li>
-            <a href="#">
-             <!--<img src="images/shirt.jpg" alt="">-->
-              <span class="product">Bilack Wear's Shirt</span>
-            </a>
-            <span class="price">Rs 1245</span>
-          </li>
-          </ul>
         </div>
       </div>
     </div>
