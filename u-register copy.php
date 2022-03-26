@@ -21,9 +21,7 @@ if(isset($_POST['submit'])) {
 
         $sqlquery = "INSERT INTO register (name, email, dob, mobile_num, age, gender, password, guardian_name, relationship, guardian_num, institute, department, level, roll_num, esewa_username, esewa_id) VALUES ('$name', '$email','$dob', '$mobile_num', '$age', '$gender', '$password', '$guardian_name', '$relationship', '$guardian_num', '$institute', '$department', '$level', '$roll_num', '$esewa_username', '$esewa_id')";
 
-        echo $mobile_num;
 
-        echo $sqlquery;
 
         if (mysqli_query($conn, $sqlquery)){
             // echo '<script>alert("record succesfully")</script>';
@@ -143,8 +141,8 @@ if(isset($_POST['submit'])) {
     <label>Institute</label>
        <select name="institute" required>
 	  <option>Aadim National College</option>
-	  <option>Jaya Multiple Campus</option>
-	  <option>Shangri-la Public school</option>
+	  <!-- <option>Jaya Multiple Campus</option>
+	  <option>Shangri-la Public school</option> -->
 	  <option>other</option>
        </select>
   </div>

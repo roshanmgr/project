@@ -115,7 +115,7 @@ session_start();
         </div>
         <div class="box">
           <div class="right-side">
-            <div class="box-topic"><a href="a-loanrequest.php">loan Request</a></div>
+            <div class="box-topic"><a href="loan.php">loan Request</a></div>
             
           </div>
           <!-- <i class='bx bxs-cart-add cart two' ></i> -->
@@ -137,7 +137,7 @@ session_start();
       <div class="sales-boxes">
         <div class="recent-sales box">
           <?php
-          include('a-usertable.php');
+          include('a-loantable.php');
           ?>         
           <!-- <div class="button">
             <a href="#">See All</a>

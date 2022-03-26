@@ -13,7 +13,6 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
 
 
 <!DOCTYPE html>
-<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
@@ -37,53 +36,18 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
           </a>
         </li>
         <li>
-          <a href="#">
-            <i class='bx bx-box' ></i>
-            <span class="links_name">Product</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
+          <a href="oanform.php">
             <i class='bx bx-list-ul' ></i>
-            <span class="links_name">Order list</span>
+            <span class="links_name">Request loan</span>
           </a>
         </li>
         <li>
           <a href="#">
             <i class='bx bx-pie-chart-alt-2' ></i>
-            <span class="links_name">Analytics</span>
+            <span class="links_name">Transfer</span>
           </a>
         </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-coin-stack' ></i>
-            <span class="links_name">Stock</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-book-alt' ></i>
-            <span class="links_name">Total order</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-user' ></i>
-            <span class="links_name">Team</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-message' ></i>
-            <span class="links_name">Messages</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-heart' ></i>
-            <span class="links_name">Favrorites</span>
-          </a>
-        </li>
+        
         <li>
           <a href="#">
             <i class='bx bx-cog' ></i>
@@ -119,93 +83,27 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
       <div class="overview-boxes">
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">Members</div>
-            <div class="number">40,876</div>
-            <div class="indicator">
-              <!-- <i class='bx bx-up-arrow-alt'></i> -->
-              <span class="text">Up from yesterday</span>
-            </div>
+            <div class="box-topic">Total Balance</div>
+            <div class="number">Rs 0000</div>
           </div>
           <!-- <i class='bx bx-cart-alt cart'></i> -->
         </div>
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">loan Request</div>
-            <div class="number">38,876</div>
-            <div class="indicator">
-              <!-- <i class='bx bx-up-arrow-alt'></i> -->
-              <span class="text">Up from yesterday</span>
-            </div>
+            <div class="box-topic"><a href="loanform.php">Request Loan</a></div>
+            <div class="number">Rs xxxx</div>
           </div>
           <!-- <i class='bx bxs-cart-add cart two' ></i> -->
         </div>
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">Transaction</div>
-            <div class="number">Rs12,876</div>
-            <div class="indicator">
-              <!-- <i class='bx bx-up-arrow-alt'></i> -->
-              <span class="text">Up from yesterday</span>
-            </div>
+            <div class="box-topic">Notification</div>
+            <div class="number">0</div>
           </div>
-          <!-- <i class='bx bx-cart cart three' ></i> -->
-        </div>
-        <div class="box">
-          <div class="right-side">
-            <div class="box-topic">Transaction</div>
-            <div class="number">Rs12,876</div>
-            <div class="indicator">
-              <!-- <i class='bx bx-up-arrow-alt'></i> -->
-              <span class="text">Up from yesterday</span>
-            </div>
-          </div>
-          <!-- <i class='bx bx-cart cart three' ></i> -->
-        </div>
-        <div class="box">
-          <div class="right-side">
-            <div class="box-topic">Total Return</div>
-            <div class="number">11,086</div>
-            <div class="indicator">
-              <!-- <i class='bx bx-down-arrow-alt down'></i> -->
-              <span class="text">Down From Today</span>
-            </div>
-          </div>
-          <!-- <i class='bx bxs-cart-download cart four' ></i> -->
-        </div>
+          
       </div>
 
-      <div class="user-boxes">
-        <div class="recent-user box">
-          <div class="title">Recent Loan Request</div>
-          <div class="user-details">
-            <ul class="details">
-              <li class="topic">Date</li>
-              <li><a href="#">02 Jan 2021</a></li>
-              <li><a href="#">02 Jan 2021</a></li>
-              <li><a href="#">02 Jan 2021</a></li>
-              <li><a href="#">02 Jan 2021</a></li>
-              <li><a href="#">02 Jan 2021</a></li>
-              <li><a href="#">02 Jan 2021</a></li>
-              <li><a href="#">02 Jan 2021</a></li>
-              <li><a href="#">02 Jan 2021</a></li>
-              <li><a href="#">02 Jan 2021</a></li>
-            </ul>
-            <ul class="details">
-            <li class="topic">User</li>
-            <li><a href="#">Tej Bdr. Magar</a></li>
-            <li><a href="#">Tika Devi Magar</a></li>
-            <li><a href="#">Krishan Bdr. Magar</a></li>
-            <li><a href="#">Nani Maiya Magar</a></li>
-            <li><a href="#">Rojina Thapa</a></li>
-            <li><a href="#">Roshan Thapa</a></li>
-            <li><a href="#">Rohan Thapa Magar</a></li>
-            <li><a href="#">Ratan Bhujel</a></li>
-            <li><a href="#">Rabin Bhujel</a></li>
-        </ul>
-        </div>
-        </div>
-        </div>
-      </div>
+      
     </div>
   </section>
 

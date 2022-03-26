@@ -15,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $mobile_num = $row['mobile_num'];
         $_SESSION['mobile_num'] = $mobile_num;
 
-        header("location: a-dashboard.php");
+        header("location: u-dashboard.php");
     }else {
 
         echo '<script>alert("Your Login Name or Password is invalid")</script>';
@@ -40,8 +40,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     ?>
 <form class="login-form" method="post">
         <h3>login now</h3>
-        <input type="text" placeholder="Mobile number" class="box">
-        <input type="password" placeholder="your password" class="box">
+        <input type="text" name="mobile_num" placeholder="Mobile number" class="box">
+        <input type="password" name="password" placeholder="your password" class="box">
         <p><a href="#">forget password ?</a></p>
         <p>don't have an account <a href="u-register.php">create now</a></p>
         <button type="submit" name="submit" class="btn">Login</button>

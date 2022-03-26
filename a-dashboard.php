@@ -34,31 +34,21 @@ session_start();
         <li>
           <a href="#">
             <i class='bx bx-box' ></i>
-            <span class="links_name">Product</span>
+            <span class="links_name">loan Request</span>
           </a>
         </li>
-        <!-- <li> -->
-          <!-- <a href="#">
-            <i class='bx bx-list-ul' ></i>
-            <span class="links_name">Order list</span>
-          </a>
-        </li>
+       
+         
         <li>
           <a href="#">
             <i class='bx bx-pie-chart-alt-2' ></i>
-            <span class="links_name">Analytics</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-coin-stack' ></i>
-            <span class="links_name">Stock</span>
+            <span class="links_name">Transaction</span>
           </a>
         </li>
         <li>
           <a href="#">
             <i class='bx bx-book-alt' ></i>
-            <span class="links_name">Total order</span>
+            <span class="links_name">Total Return</span>
           </a>
         </li>
         <li>
@@ -74,7 +64,7 @@ session_start();
           </a>
         </li>
         <li>
-          <a href="#">
+          <!-- <a href="#">
             <i class='bx bx-heart' ></i>
             <span class="links_name">Favrorites</span>
           </a>
@@ -84,7 +74,7 @@ session_start();
             <i class='bx bx-cog' ></i>
             <span class="links_name">Setting</span>
           </a>
-        </li> -->
+        </li>  -->
         <li class="log_out">
           <a href="a-login.php">
             <i class='bx bx-log-out'></i>
@@ -125,34 +115,21 @@ session_start();
         </div>
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">loan Request</div>
-            <div class="number">38,876</div>
-            <div class="indicator">
-              <!-- <i class='bx bx-up-arrow-alt'></i> -->
-              <span class="text">Up from yesterday</span>
-            </div>
+            <div class="box-topic"><a href="a-loanrequest.php">loan Request</a></div>
+            
           </div>
           <!-- <i class='bx bxs-cart-add cart two' ></i> -->
         </div>
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">Transaction</div>
-            <div class="number">Rs12,876</div>
-            <div class="indicator">
-              <!-- <i class='bx bx-up-arrow-alt'></i> -->
-              <span class="text">Up from yesterday</span>
-            </div>
+            <div class="box-topic"><a href="">Transaction</a></div>
           </div>
           <!-- <i class='bx bx-cart cart three' ></i> -->
         </div>
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">Total Return</div>
-            <div class="number">11,086</div>
-            <div class="indicator">
-              <!-- <i class='bx bx-down-arrow-alt down'></i> -->
-              <span class="text">Down From Today</span>
-            </div>
+            <div class="box-topic"><a href="">Total Return</a></div>
+           
           </div>
           <!-- <i class='bx bxs-cart-download cart four' ></i> -->
         </div>
