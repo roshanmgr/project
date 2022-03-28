@@ -27,7 +27,7 @@
 
 <section class="features" id="features">
 
-    <h1 class="heading"> <span>Our Service</span> </h1>
+    <h1 class="heading"> Our Service </h1>
 
     <div class="box-container">
 

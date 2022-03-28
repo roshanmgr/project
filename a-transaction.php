@@ -21,7 +21,7 @@ session_start();
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <i class='bx '></i>
+      <i class='bx'></i>
       <span class="logo_name"><a href="a-dashboard.php"> <span style="color:brown">S</span><span style="color:blueviolet">A</span><span style="color:greenyellow">H</span><span style="color:red">A</span><span style="color:grey">Y</span><span style="color:yellowgreen">O</span><span style="color:purple">G</span><span style="color:lavender">I</span> </a></span>
     </div>
       <ul class="nav-links">
@@ -137,7 +137,7 @@ session_start();
       <div class="sales-boxes">
         <div class="recent-sales box">
           <?php
-          include('a-loantable.php');
+          include('a-transfertable.php');
           ?>         
           <!-- <div class="button">
             <a href="#">See All</a>

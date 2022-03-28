@@ -1,14 +1,16 @@
 <?php
+        include("user.php");
 
 if(isset($_POST['submit'])) {
     include ("database/config.php");
     $name = $_POST['name'];
     $email = $_POST['email'];
     $dob = $_POST['dob'];
-    $mobile_num = $_POST['mobile_num'];
+    $mobile_num = trim($_POST['mobile_num']);
     $age = $_POST['age'];
     $gender = $_POST['gender'];
-    $password = $_POST['password'];
+    $password = trim($_POST['password']);
+    // $encrypted_password = md5($password);
     $guardian_name = $_POST['guardian_name'];
     $relationship = $_POST['relationship'];
     $guardian_num = $_POST['guardian_num'];
@@ -18,6 +20,7 @@ if(isset($_POST['submit'])) {
     $roll_num = $_POST['roll_num'];
     $esewa_username = $_POST['esewa_username'];
     $esewa_id = $_POST['esewa_id'];
+    
 
         $sqlquery = "INSERT INTO register (name, email, dob, mobile_num, age, gender, password, guardian_name, relationship, guardian_num, institute, department, level, roll_num, esewa_username, esewa_id) VALUES ('$name', '$email','$dob', '$mobile_num', '$age', '$gender', '$password', '$guardian_name', '$relationship', '$guardian_num', '$institute', '$department', '$level', '$roll_num', '$esewa_username', '$esewa_id')";
 
@@ -26,7 +29,8 @@ if(isset($_POST['submit'])) {
         echo $sqlquery;
 
         if (mysqli_query($conn, $sqlquery)){
-            // echo '<script>alert("record succesfully")</script>';
+            echo '<script>alert("record succesfully")</script>';
+        
             header("location: u-login.php");
         } else {
             echo "Error: " . $sqlquery . "<br>" . mysqli_error($conn);
@@ -111,7 +115,7 @@ if(isset($_POST['submit'])) {
 
 <div class="form_item">
     <label>Confirm Password</label>
-    <input type="text" name="confirm_password" required>
+    <input type="password" name="confirm_password" required>
 </div>
 
 </div>
@@ -134,7 +138,7 @@ if(isset($_POST['submit'])) {
 <div class="form_wrap fullname">
 
 <div class="form_item">
-    <label>Contact number</label>
+    <label>Guardain Mobile number</label>
     <input type="text" placeholder="guardian number" name="guardian_num" required> 
 </div>
 </div>
@@ -193,7 +197,6 @@ if(isset($_POST['submit'])) {
 
 </div>
 <button type="submit" name="submit" class="btn">register</button>
-
  </form>
  </div>
 </div>

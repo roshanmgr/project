@@ -25,25 +25,25 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <i class='bx bxl-c-plus-plus'></i>
-      <span class="logo_name"><a href="#"> <span style="color:brown">S</span><span style="color:blueviolet">A</span><span style="color:greenyellow">H</span><span style="color:red">A</span><span style="color:grey">Y</span><span style="color:yellowgreen">O</span><span style="color:purple">G</span><span style="color:lavender">I</span> </a></span>
+    <i class='bx ' ></i>
+      <span class="logo_name"><a href="u-dashboard.php"> <span style="color:brown">S</span><span style="color:blueviolet">A</span><span style="color:greenyellow">H</span><span style="color:red">A</span><span style="color:grey">Y</span><span style="color:yellowgreen">O</span><span style="color:purple">G</span><span style="color:lavender">I</span> </a></span>
     </div>
       <ul class="nav-links">
         <li>
-          <a href="#" class="active">
+          <a href="u-dashboard.php" class="active">
             <i class='bx bx-grid-alt' ></i>
             <span class="links_name">Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="oanform.php">
+          <a href="loanform.php">
             <i class='bx bx-list-ul' ></i>
             <span class="links_name">Request loan</span>
           </a>
         </li>
         <li>
-          <a href="#">
-            <i class='bx bx-pie-chart-alt-2' ></i>
+          <a href="transferform.php">
+            <i class='bx bx-pie-chart-alt-2'></i>
             <span class="links_name">Transfer</span>
           </a>
         </li>

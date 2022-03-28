@@ -1,22 +1,41 @@
 <?php
 include("database/config.php");
 session_start();
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $mobile_num = $_POST['mobile_num'];
-    $password = $_POST['password'];
 
-    $sql = "SELECT id, mobile_num FROM register WHERE mobile_num = '$mobile_num' and password = '$password'";
+$mobile_num = $password = "";
+$err = "";
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    if(empty(trim($_POST['mobile_num'])) || empty(trim($_POST['password'])))
+    {
+        $err = "Please enter mobile_num + password";
+    }
+    else{
+        $mobile_num = trim($_POST['mobile_num']);
+        $password = trim($_POST['password']);
+    }
+
+
+    $sql = "SELECT * FROM user WHERE mobile_num = '$mobile_num' and password = '$password'";
     $result = mysqli_query($conn,$sql);
     $row = mysqli_fetch_assoc($result);
 
     $count = mysqli_num_rows($result);
 
     if($count == 1) {
-        $mobile_num = $row['mobile_num'];
-        $_SESSION['mobile_num'] = $mobile_num;
 
-        header("location: u-dashboard.php");
+        $_SESSION['role'] = $row['role'];
+
+
+        $mobile_num = $row['mobile_num'];
+        // $_SESSION['mobile_num'] = $mobile_num;
+
+        if($_SESSION['role'] == "admin"){
+        header("location: a-dashboard.php");
     }else {
+        header("location: u-dashboard.php");
+    }
+    }else{
 
         echo '<script>alert("Your Login Name or Password is invalid")</script>';
     }

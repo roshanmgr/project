@@ -14,16 +14,11 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
 
 if(isset($_POST['submit'])) {
     include ("database/config.php");
-    $name = $_POST['name'];
-    $mobile_num = $_POST['mobile_num'];
-    $duration = $_POST['duration'];
-    $loanamount = $_POST['loanamount'];
-    $interestrate = $_POST['interestrate'];
-    $institute = $_POST['institute'];
-    $gender = $_POST['gender'];
-    $level = $_POST['level'];
+    $transfer_from = $_POST['transfer_from'];
+    $transfer_to = $_POST['transfer_to'];
+    $amount = $_POST['amount'];
 
-        $sqlquery = "INSERT INTO loanrequest (name, mobile_num, duration, loanamount, institute, gender, level, interestrate) VALUES ('$name', '$mobile_num','$duration', '$loanamount', '$institute', '$gender', '$level', '$interestrate' )";
+        $sqlquery = "INSERT INTO transfer (transfer_from,transfer_to,amount) VALUES ('$transfer_from', '$transfer_to','$amount')";
 
 
 
@@ -138,96 +133,38 @@ if(isset($_POST['submit'])) {
    	<div class="r-heading">
      <h2>Loan Request Form</h2>
   </div>
-  <div class="form_wrap fullname">
-
-  <div class="form_item">
-      <label>Full Name</label>
-      <input type="text" placeholder="full name" name="name" required> 
-  </div>
-
-</div>
+  
  <div class="form_wrap fullname">
 
   <div class="form_item">
-      <label>Contact No.</label>
-      <input type="number" placeholder="Mobile Number" name="mobile_num" required> 
+      <label>Transfer from:</label>
+      <input type="text" placeholder="Sender Mobile Number" name="transfer_from" required> 
   </div>
 
-
-
-  <div class="form_item">
-    <label>Loan Duration</label>
-    <select  name="duration" required>
-	  <option selected>1 Year</option>
-       </select>
-</div>
 
 </div>
 
 <div class="form_wrap fullname">
 
 <div class="form_item">
-    <label>loan Amount</label>
-    <input type="text" name="loanamount"  placeholder="Rs 100 - Rs5,000" required> 
+    <label>Transfer To:</label>
+    <input type="text" name="transfer_to"  placeholder="Receiver Mobile number" required> 
 </div>
 
-
-<div class="form_item">
-    <label>Interest Rate</label>
-       <select name="interestrate" required>
-	  <option>10%</option>
-       </select>
-  </div>
 
 </div>
 
 <div class="form_wrap fullname">
 
-<div class="form_item">
-    <label>Institude</label>
-       <select name="institute" required>
-	  <option>Aadim</option>
-       </select>
+  <div class="form_item">
+      <label>Amount To BE Transfer:</label>
+      <input type="text" placeholder="Amount" name="amount" required> 
   </div>
 
-  <div class="form_item">
-    <label>Gender</label>
-    <select  name="gender" required>
-	  <option selected>......</option>
-	  <option>Male</option>
-	  <option>Female</option>
-	  <option>other</option>
-       </select>
-</div>
-</div>
-
-<div class="form_wrap fullname">
-
-
-<div class="form_item">
-    <label>Department</label>
-       <select name="department" required>
-	  <option>IT</option>
-	  <option>Science</option>
-	  <option>Management</option>
-	  <option>Law</option>
-       </select>
-  </div>
-
-
-  <div class="form_item">
-    <label>Level</label>
-       <select name="level" required>
-	  <option>Master</option>
-	  <option>Bachelor</option>
-	  <option>Higher</option>
-	  <option>Secondary</option>
-       </select>
- </div>
 </div>
 <div class="form_wrap select_box">
    
-<button type="submit" name="submit" class="btn">register</button>
+<button type="submit" name="submit" class="btn">Transfer Now</button>
 
  </form>
  </div>

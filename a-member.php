@@ -21,7 +21,7 @@ session_start();
 <body>
   <div class="sidebar">
     <div class="logo-details">
-      <i class='bx bxl-c-plus-plus'></i>
+      <i class='bx '></i>
       <span class="logo_name"><a href="a-dashboard.php"> <span style="color:brown">S</span><span style="color:blueviolet">A</span><span style="color:greenyellow">H</span><span style="color:red">A</span><span style="color:grey">Y</span><span style="color:yellowgreen">O</span><span style="color:purple">G</span><span style="color:lavender">I</span> </a></span>
     </div>
       <ul class="nav-links">
@@ -32,7 +32,7 @@ session_start();
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="a-loantable.php">
             <i class='bx bx-box' ></i>
             <span class="links_name">loan Request</span>
           </a>
@@ -40,7 +40,7 @@ session_start();
        
          
         <li>
-          <a href="#">
+          <a href="a-transaction.php">
             <i class='bx bx-pie-chart-alt-2' ></i>
             <span class="links_name">Transaction</span>
           </a>
@@ -76,7 +76,7 @@ session_start();
           </a>
         </li>  -->
         <li class="log_out">
-          <a href="a-login.php">
+          <a href="u-login.php">
             <i class='bx bx-log-out'></i>
             <span class="links_name">Log out</span>
           </a>
