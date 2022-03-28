@@ -10,7 +10,7 @@
 
     if(isset($_POST['submit'])){
         $name = $_POST['name'];
-        $password =$_POST['password'];
+        $password =md5($_POST['password']);
         $mobile_num =$_POST['mobile_num'];
 
             $sql1 = "INSERT INTO `user`(`username`, `password`, `mobile_num`, `role`) VALUES ('$name','$password','$mobile_num', 'guest')";

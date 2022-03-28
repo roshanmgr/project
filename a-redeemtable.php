@@ -12,11 +12,11 @@
 <body>
 
 <div class="addInfo">
-        <h4>Add :</h4><button><a href="loanform.php">Add</a></button>
+        <h4>Add :</h4><button><a href="redeem.php">Add</a></button>
     </div>
 
     <div class="title">
-        <h1>Loan Request Information</h1>
+        <h1>Redeem Request Information</h1>
     </div>
 
     <div class="main">
@@ -25,12 +25,9 @@
             <tr>
                 <th>S.N</th>
                 <!-- <th>Id</th> -->
-                <th>Name</th>
-                <th>Mobile number</th>
-                <th>Institute</th>
                 <th>Amount</th>
-                <th>Gender</th>
-                <th>Level</th>
+                <th>esewa_username</th>
+                <th>esewa_id</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -38,7 +35,7 @@
 
     <?php
     include "database/config.php";
-    $selectQuery = "SELECT * FROM loanrequest";
+    $selectQuery = "SELECT * FROM redeem";
 
     $result = mysqli_query($conn, $selectQuery);  //
 
@@ -52,16 +49,13 @@
     <tr>
         <td><?php echo $i;?></td>
         
-        <td><?php echo $row ['name']?></td>
-        <td><?php echo $row ['mobile_num']?></td>
-        <td><?php echo $row ['institute']?></td>
-        <td><?php echo $row ['loanamount']?></td>
+        <td><?php echo $row ['amount']?></td>
+        <td><?php echo $row ['esewa_username']?></td>
+        <td><?php echo $row ['esewa_id']?></td>
         
-        <td><?php echo $row ['gender']?></td>
-        <td><?php echo $row ['level']?></td>
         <td>
-            <button><a href="mailto:">Approve</a></button>
-            <button><a href="mailto:">Reject</a></button>
+            <button><a href="mailto:">Done</a></button>
+            <button><a href="mailto:">Not Done</a></button>
         </td>
     </tr>
         <?php

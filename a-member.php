@@ -52,9 +52,9 @@ session_start();
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="a-redeem.php">
             <i class='bx bx-user' ></i>
-            <span class="links_name">Team</span>
+            <span class="links_name">Redeem</span>
           </a>
         </li>
         <li>
@@ -122,7 +122,7 @@ session_start();
         </div>
         <div class="box">
           <div class="right-side">
-            <div class="box-topic"><a href="">Transaction</a></div>
+            <div class="box-topic"><a href="a-transaction.php">Transaction</a></div>
           </div>
           <!-- <i class='bx bx-cart cart three' ></i> -->
         </div>

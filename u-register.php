@@ -9,7 +9,7 @@ if(isset($_POST['submit'])) {
     $mobile_num = trim($_POST['mobile_num']);
     $age = $_POST['age'];
     $gender = $_POST['gender'];
-    $password = trim($_POST['password']);
+    $password = md5(trim($_POST['password']));
     // $encrypted_password = md5($password);
     $guardian_name = $_POST['guardian_name'];
     $relationship = $_POST['relationship'];

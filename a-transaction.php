@@ -52,9 +52,9 @@ session_start();
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="a-redeem.php">
             <i class='bx bx-user' ></i>
-            <span class="links_name">Team</span>
+            <span class="links_name">Redeem</span>
           </a>
         </li>
         <li>

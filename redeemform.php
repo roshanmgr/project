@@ -10,6 +10,31 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
 
 ?>
 
+<?php
+
+if(isset($_POST['submit'])) {
+    include ("database/config.php");
+    $amount = $_POST['amount'];
+    $esewa_username = $_POST['esewa_username'];
+    $esewa_id = $_POST['esewa_id'];
+    
+
+        $sqlquery = "INSERT INTO redeem (amount,esewa_username,esewa_id) VALUES ('$amount','$esewa_username', '$esewa_id')";
+
+
+
+        if (mysqli_query($conn, $sqlquery)){
+            echo '<script>alert("record succesfully")</script>';
+            
+            header("location: u-dashboard.php");
+        } else {
+            echo "Error: " . $sqlquery . "<br>" . mysqli_error($conn);
+        }
+    
+}
+
+?>
+
 
 
 <!DOCTYPE html>
@@ -18,6 +43,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
     <meta charset="UTF-8">
     <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
     <link rel="stylesheet" href="css/a-dashboard.css">
+    <link rel="stylesheet" href="./css/u-register.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +52,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
   <div class="sidebar">
     <div class="logo-details">
     <i class='bx ' ></i>
-      <span class="logo_name"><a href="u-dashboard.php"> <span style="color:brown">S</span><span style="color:blueviolet">A</span><span style="color:greenyellow">H</span><span style="color:red">A</span><span style="color:grey">Y</span><span style="color:yellowgreen">O</span><span style="color:purple">G</span><span style="color:lavender">I</span> </a></span>
+      <span class="logo_name"><u href="a-dashboard.php"> <span style="color:brown">S</span><span style="color:blueviolet">A</span><span style="color:greenyellow">H</span><span style="color:red">A</span><span style="color:grey">Y</span><span style="color:yellowgreen">O</span><span style="color:purple">G</span><span style="color:lavender">I</span> </a></span>
     </div>
       <ul class="nav-links">
         <li>
@@ -43,7 +69,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
         </li>
         <li>
           <a href="transferform.php">
-            <i class='bx bx-pie-chart-alt-2'></i>
+            <i class='bx bx-pie-chart-alt-2' ></i>
             <span class="links_name">Transfer</span>
           </a>
         </li>
@@ -109,6 +135,50 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
           </div>
           
       </div>
+      <div class="wrapper">
+ <div class="form_container">
+   <form name="form" method="POST">
+   	<div class="r-heading">
+     <h2>Redeem Request</h2>
+  </div>
+
+  <div class="form_wrap fullname">
+
+  <div class="form_item">
+      <label>Amount To BE Transfer:</label>
+      <input type="text" placeholder="Amount" name="amount" required> 
+  </div>
+
+</div>
+  
+ <div class="form_wrap fullname">
+
+  <div class="form_item">
+      <label>Esewa username</label>
+      <input type="text" placeholder="Reciever esewa username" name="esewa_username" required> 
+  </div>
+
+
+</div>
+
+<div class="form_wrap fullname">
+
+<div class="form_item">
+    <label>Redeem To esewa_id:</label>
+    <input type="text" name="esewa_id"  placeholder="Receiver esewa number" required> 
+</div>
+
+
+</div>
+
+
+<div class="form_wrap select_box">
+   
+<button type="submit" name="submit" class="btn">Redeem Now</button>
+
+ </form>
+ </div>
+</div>
 
       
     </div>

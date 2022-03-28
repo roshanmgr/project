@@ -12,7 +12,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     else{
         $mobile_num = trim($_POST['mobile_num']);
-        $password = trim($_POST['password']);
+        $password = md5(trim($_POST['password']));
     }
 
 
@@ -28,7 +28,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         $mobile_num = $row['mobile_num'];
-        // $_SESSION['mobile_num'] = $mobile_num;
+        $_SESSION['mobile_num'] = $mobile_num;
 
         if($_SESSION['role'] == "admin"){
         header("location: a-dashboard.php");
@@ -36,8 +36,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         header("location: u-dashboard.php");
     }
     }else{
-
-        echo '<script>alert("Your Login Name or Password is invalid")</script>';
+         echo $password;
+        // echo '<script>alert("Your Login Name or Password is invalid")</script>';
     }
 }
 ?>
@@ -58,8 +58,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     include('u-header.php');
     ?>
 <form class="login-form" method="post">
-        <h3>login now</h3>
-        <input type="text" name="mobile_num" placeholder="Mobile number" class="box">
+        <h3>login now </h3>
+        <input type="text" name="mobile_num" placeholder="Mobile number" autocomplete="off" class="box">
         <input type="password" name="password" placeholder="your password" class="box">
         <p><a href="#">forget password ?</a></p>
         <p>don't have an account <a href="u-register.php">create now</a></p>
