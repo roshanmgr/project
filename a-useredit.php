@@ -98,16 +98,16 @@
 
 <div class="form_wrap fullname">
 
-<div class="form_item">
+<!-- <div class="form_item">
     <label>Password</label>
     <input type="password" name="password"  value=<?php echo $row['password']?> required> 
-</div>
+</div> -->
 
 
-<div class="form_item">
+<!-- <div class="form_item">
     <label>Confirm Password</label>
     <input type="text" name="confirm_password" required>
-</div>
+</div> -->
 
 </div>
 
@@ -129,8 +129,8 @@
 <div class="form_wrap fullname">
 
 <div class="form_item">
-    <label>Contact number</label>
-    <input type="text" placeholder="guardian number" name="guardian_num" value=<?php echo $row['guardian_num']?> max = "9999999999" required> 
+    <label>Guardian Mobile Number</label>
+    <input type="text" placeholder="guardian number" name="guardian_num" value=<?php echo $row['guardian_num']?> min = "9000000000" max = "9999999999" required> 
 </div>
 </div>
 
@@ -233,7 +233,7 @@ if(isset($_POST['submit'])) {
     $mobile_num = $_POST['mobile_num'];
     $age = $_POST['age'];
     $gender = $_POST['gender'];
-    $password = $_POST['password'];
+    // $password = $_POST['password'];
     $guardian_name = $_POST['guardian_name'];
     $relationship = $_POST['relationship'];
     $guardian_num = $_POST['guardian_num'];
@@ -244,7 +244,8 @@ if(isset($_POST['submit'])) {
     $esewa_username = $_POST['esewa_username'];
     $esewa_id = $_POST['esewa_id'];
 
-        $update = "UPDATE register SET name='$name', email='$email', dob='$dob', mobile_num='$mobile_num', age=$age', gender='$gender', password='$password', guardian_name='$guardian_name', relationship='$relationship', guardian_num='$guardian_num', institute='$institute', department='$department', level='$level', roll_num='$roll_num', esewa_username='$esewa_username', esewa_id='$esewa_id') WHERE id=$id";
+
+        $update = "Update register SET name = '$name', email = '$email', dob= '$dob', mobile_num='$mobile_num', age ='$age', gender ='$gender', guardian_name = '$guardian_name', relationship = '$relationship', institute='$institute', department='$department', level='$level', roll_num='$roll_num',guardian_num='guardian_num', esewa_username='$esewa_username', esewa_id = '$esewa_id' where id='$id'";
 
 if(mysqli_query($conn,$update)){
                 echo '<script>alert("Update succesfully")</script>';

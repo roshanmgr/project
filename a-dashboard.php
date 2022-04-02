@@ -79,7 +79,7 @@ session_start();
           </a>
         </li>  -->
         <li class="log_out">
-          <a href="a-login.php">
+          <a href="u-login.php">
             <i class='bx bx-log-out'></i>
             <span class="links_name">Log out</span>
           </a>
@@ -157,6 +157,7 @@ session_start();
                 <th>Mobile number</th>
                 <th>Institute</th>
                 <th>Level</th>
+                <th>Status</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -183,8 +184,26 @@ session_start();
         <td><?php echo $row ['institute']?></td>    
         <td><?php echo $row ['level']?></td>
         <td>
-            <button><a href="mailto:">Approve</a></button>
-            <button><a href="mailto:">Reject</a></button>
+            <?php
+                if ($row['Status']==0){
+                    echo
+                    '<p>Pending...</p>';
+                }else if ($row['Status']==1){
+                    echo
+                    '<p>Approved</p>';
+                }else if($row['Status']==2){
+                    echo
+                    '<p>Rejected</p>';
+                }
+            ?>
+        </td>
+        <td>
+        <button class="approve">
+                <a href="approvereject/approvereject.php?requestId=<?php echo $row ['id'];?>&status=1" onclick = "sendMail('<?php echo $row['email'];?>')">Approve</a>
+            </button>
+            <button class="reject">
+                <a href="approvereject/approveeject.php?requestId=<?php echo $row ['id'];?>&status=2" onclick = "sendMail('<?php echo $row['email'];?>')">Reject</a>
+            </button>
         </td>
     </tr>
         <?php
@@ -275,6 +294,13 @@ sidebarBtn.onclick = function() {
 }else
   sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
 }
+ </script>
+ <script>
+   <script>
+      function sendMail(m){
+         parent.location = "mailto:"+m;
+      }
+    </script>
  </script>
 
 </body>

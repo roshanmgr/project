@@ -61,7 +61,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <h3>login now </h3>
         <input type="text" name="mobile_num" placeholder="Mobile number" autocomplete="off" class="box">
         <input type="password" name="password" placeholder="your password" class="box">
-        <p><a href="#">forget password ?</a></p>
+        <p><a href="forgetpassword.php">forget password ?</a></p>
         <p>don't have an account <a href="u-register.php">create now</a></p>
         <button type="submit" name="submit" class="btn">Login</button>
     </form> 

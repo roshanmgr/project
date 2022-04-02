@@ -79,9 +79,9 @@ if(isset($_POST['submit'])) {
         </li>
         
         <li>
-          <a href="#">
-            <i class='bx bx-cog' ></i>
-            <span class="links_name">Setting</span>
+          <a href="redeemform.php">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">Redeem</span>
           </a>
         </li>
         <li class="log_out">
@@ -127,8 +127,9 @@ if(isset($_POST['submit'])) {
         </div>
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">Notification</div>
-            <div class="number">0</div>
+            <div class="box-topic"><a href="redeemform.php">Redeem</a></div>
+            <div class="number"><a href="redeemform.php">here</a></div>
+            <div class="number"></div>
           </div>
           
       </div>
@@ -227,7 +228,7 @@ if(isset($_POST['submit'])) {
 </div>
 <div class="form_wrap select_box">
    
-<button type="submit" name="submit" class="btn">register</button>
+<button type="submit" name="submit" class="btn">Submit</button>
 
  </form>
  </div>

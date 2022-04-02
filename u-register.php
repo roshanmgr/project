@@ -24,14 +24,14 @@ if(isset($_POST['submit'])) {
 
         $sqlquery = "INSERT INTO register (name, email, dob, mobile_num, age, gender, password, guardian_name, relationship, guardian_num, institute, department, level, roll_num, esewa_username, esewa_id) VALUES ('$name', '$email','$dob', '$mobile_num', '$age', '$gender', '$password', '$guardian_name', '$relationship', '$guardian_num', '$institute', '$department', '$level', '$roll_num', '$esewa_username', '$esewa_id')";
 
-        echo $mobile_num;
+        // echo $mobile_num;
 
-        echo $sqlquery;
+        // echo $sqlquery;
 
         if (mysqli_query($conn, $sqlquery)){
             echo '<script>alert("record succesfully")</script>';
         
-            header("location: u-login.php");
+            // header("location: u-login.php");
         } else {
             echo "Error: " . $sqlquery . "<br>" . mysqli_error($conn);
         }
@@ -109,14 +109,14 @@ if(isset($_POST['submit'])) {
 
 <div class="form_item">
     <label>Password</label>
-    <input type="password" name="password" required> 
+    <input type="password" name="password" minlengthrequired> 
 </div>
 
 
-<div class="form_item">
+<!-- <div class="form_item">
     <label>Confirm Password</label>
     <input type="password" name="confirm_password" required>
-</div>
+</div> -->
 
 </div>
 

@@ -75,7 +75,7 @@ if(isset($_POST['submit'])) {
         </li>
 
         <li>
-          <a href="#">
+          <a href="redeemform.php">
             <i class='bx bx-user' ></i>
             <span class="links_name">Redeem</span>
           </a>

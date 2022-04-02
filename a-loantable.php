@@ -26,11 +26,13 @@
                 <th>S.N</th>
                 <!-- <th>Id</th> -->
                 <th>Name</th>
+                <th>Email</th>
                 <th>Mobile number</th>
                 <th>Institute</th>
                 <th>Amount</th>
                 <th>Gender</th>
                 <th>Level</th>
+                <th>Status</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -53,12 +55,14 @@
         <td><?php echo $i;?></td>
         
         <td><?php echo $row ['name']?></td>
+        <td><?php echo $row ['email']?></td>
         <td><?php echo $row ['mobile_num']?></td>
         <td><?php echo $row ['institute']?></td>
         <td><?php echo $row ['loanamount']?></td>
         
         <td><?php echo $row ['gender']?></td>
         <td><?php echo $row ['level']?></td>
+        <td><?php echo $row ['status']?></td>
         <td>
             <button><a href="mailto:">Approve</a></button>
             <button><a href="mailto:">Reject</a></button>
